@@ -1,0 +1,4 @@
+.idea/
+.ipynb_checkpoints/
+trained_models/
+*.csv
