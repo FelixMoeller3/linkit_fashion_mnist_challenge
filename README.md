@@ -1,2 +1,2 @@
 # linkit_fashion_mnist_challenge
-Team repository for links fashion mnist data science challenge
+Team repository for linkit fashion mnist data science challenge
