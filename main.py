@@ -3,6 +3,7 @@ from tensorflow import keras
 from tensorflow.keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Flatten, BatchNormalization
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.regularizers import l2
+from linkit_fashion_mnist_challenge.train_data import load_dataset
 #from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 #import matplotlib.pyplot as plt
@@ -15,13 +16,7 @@ L2_PENALTY = 0.002
 
 gen = ImageDataGenerator(horizontal_flip=True, zoom_range=0.1)
 
-(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
-
-x_train = x_train.reshape(-1,28,28, 1)
-x_test = x_test.reshape(-1,28,28, 1)
-
-x_train = x_train/255
-x_test = x_test/255
+(x_train, y_train), (x_test, y_test) = load_dataset()
 
 def build_model():
     model = keras.models.Sequential()
