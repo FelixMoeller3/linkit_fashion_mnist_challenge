@@ -1,0 +1,3 @@
+[submodule "random_eraser"]
+	path = random_eraser
+	url = https://github.com/yu4u/cutout-random-erasing.git
